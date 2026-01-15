@@ -27,6 +27,15 @@ class TodoApi {
     return todos;
   }
 
+
+Future<Task> getTaskById(int id) async {
+  final path = '/todos/$id';
+  if (debug) print('TodoApi: GET $path');
+  final resp = await _client.get(path);
+  if (debug)
+    print('TodoApi: GET $path responseStatus=${resp.statusCode} data=${resp.data}');
+  return _fromJson(resp.data);
+}
   Future<Task> addTask(Task task) async {
     final path = '/todos/add';
     final body = {
