@@ -1,4 +1,4 @@
-name: flutter_hive
+name: flutter_task_repository
 description: Simple Todo app with GetX and Hive
 publish_to: 'none'
 version: 1.0.0+1
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
+  
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   intl: ^0.18.1
